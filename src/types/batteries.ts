@@ -8,7 +8,7 @@ interface BatteryRaw {
 
 interface Measurement {
     batteryLevel: number;
-    timestamp: Date;
+    timestamp: number;
 }
 
 interface Device {

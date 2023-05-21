@@ -13,19 +13,19 @@ export const batteriesParser = (data: BatteriesRaw) => {
       }
       devices[entry.serialNumber].measurements.push({
         batteryLevel: entry.batteryLevel,
-        timestamp: new Date(entry.timestamp),
+        timestamp: +new Date(entry.timestamp),
       });
     });
   
     Object.values(devices).forEach(device => {
-      device.measurements.sort((a, b) => +a.timestamp - +b.timestamp);
+      device.measurements.sort((a, b) => a.timestamp - b.timestamp);
       let totalBatteryUsage = 0;
       let count = 0;
   
       for (let i = 1; i < device.measurements.length; i++) {
         const previous = device.measurements[i - 1];
         const current = device.measurements[i];
-        const timeDifference = (+current.timestamp - +previous.timestamp) / (1000 * 60 * 60 * 24);
+        const timeDifference = (current.timestamp - previous.timestamp) / (1000 * 60 * 60 * 24);
         const batteryUsage = previous.batteryLevel - current.batteryLevel;
   
         if (batteryUsage > 0) {
