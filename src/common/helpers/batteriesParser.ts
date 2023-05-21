@@ -3,6 +3,7 @@ import { Academies, BatteriesRaw, Devices } from '../../types/batteries';
 export const batteriesParser = (data: BatteriesRaw) => {
     const devices: Devices = {};
     const academies: Academies = {};
+    const academiesPrioritized: number[] = [];
   
     data.forEach(entry => {
       if (!devices[entry.serialNumber]) {
@@ -37,12 +38,13 @@ export const batteriesParser = (data: BatteriesRaw) => {
       if (count > 0 && totalBatteryUsage / count > 0.3) {
         if (!academies[device.academyId]) {
           academies[device.academyId] = { batteryIssues: 0, devices: [] };
+          academiesPrioritized.push(device.academyId);
         }
         academies[device.academyId].batteryIssues++;
         academies[device.academyId].devices.push(device);
       }
     });
-  
-    return academies;
+    academiesPrioritized.sort((a, b) => academies[a].batteryIssues - academies[b].batteryIssues);
+    return { academies, academiesPrioritized };
   
 };
