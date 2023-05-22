@@ -48,7 +48,7 @@ export const batteriesParser = (data: BatteriesRaw) => {
         academies[device.academyId].devices.push(device);
       }
     });
-    academiesPrioritized.sort((a, b) => academies[a].batteryIssues - academies[b].batteryIssues);
+    academiesPrioritized.sort((a, b) => academies[b].batteryIssues - academies[a].batteryIssues);
     return { academies, academiesPrioritized };
   
 };
