@@ -1,0 +1,16 @@
+.academies-list__academy {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.academies-list__academy:hover, .academies-list__academy_selected {
+    border-color: gray;
+}
+
+.academies-list__academy_selected {
+    border-color: black;
+}

@@ -1,0 +1,15 @@
+.layout {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    margin: 20px;
+    grid-gap: 20px;
+}
+
+.layout__extra {
+    border: 1px solid;
+}
+
+.layout__main, .layout__extra {
+    max-height: 500px;
+    overflow: auto;
+}
