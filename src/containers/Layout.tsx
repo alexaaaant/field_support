@@ -1,8 +1,9 @@
 import React from 'react';
-import { AcademiesInfo } from '../components/AcademyInfo';
-import { AcademiesList } from '../components/AcademyList';
+import '../styles/layout.css';
+import { AcademiesInfo } from '../components/AcademiesInfo';
+import { AcademiesList } from '../components/AcademiesList';
 
-export const AcademiesLayout: React.FC = () => {
+export const Layout: React.FC = () => {
     return (
         <div className="layout">
             <div className="layout__main">
