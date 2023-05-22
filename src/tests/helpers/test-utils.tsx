@@ -15,7 +15,12 @@ const AllTheProviders: FC<{ children: React.ReactNode }> = ({ children }) => {
 };
 
 const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>) =>
-  render(ui, { wrapper: AllTheProviders, ...options });
+  render(ui, { wrapper: AllTheProviders, ...options });  
+
+const scheduler = typeof setImmediate === 'function' ? setImmediate : setTimeout;
+async function flushPromises(): Promise<void> {
+  return await new Promise((resolve) => scheduler(resolve));
+}
 
 export * from '@testing-library/react';
-export { customRender as render };
+export { customRender as render, flushPromises };

@@ -1,0 +1,306 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should display a spinner before data 1`] = `
+<div>
+   
+  <div
+    class="container"
+  >
+    <div>
+      Loading...
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App should display a spinner before data 2`] = `
+<div>
+   
+  <div
+    class="container"
+  >
+    <div
+      class="layout"
+    >
+      <div
+        class="layout__main"
+      >
+        <div
+          class="academies-list"
+        >
+          <span
+            class="header"
+          >
+            Academies ID:
+          </span>
+          <div
+            class="academies-list__container"
+          >
+            <div
+              class="academies-list__academy "
+              data-academy="true"
+              data-id="30006"
+            >
+              30006
+            </div>
+            <div
+              class="academies-list__academy "
+              data-academy="true"
+              data-id="30015"
+            >
+              30015
+            </div>
+            <div
+              class="academies-list__academy "
+              data-academy="true"
+              data-id="30013"
+            >
+              30013
+            </div>
+            <div
+              class="academies-list__academy "
+              data-academy="true"
+              data-id="30019"
+            >
+              30019
+            </div>
+            <div
+              class="academies-list__academy "
+              data-academy="true"
+              data-id="30021"
+            >
+              30021
+            </div>
+            <div
+              class="academies-list__academy "
+              data-academy="true"
+              data-id="30007"
+            >
+              30007
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="layout__extra"
+      >
+        <div
+          class="academies-info"
+        >
+          <div
+            class="academy-empty"
+          >
+            Select an academy to check batteries levels
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App should display an academy info after click on it 1`] = `
+<div>
+   
+  <div
+    class="container"
+  >
+    <div
+      class="layout"
+    >
+      <div
+        class="layout__main"
+      >
+        <div
+          class="academies-list"
+        >
+          <span
+            class="header"
+          >
+            Academies ID:
+          </span>
+          <div
+            class="academies-list__container"
+          >
+            <div
+              class="academies-list__academy "
+              data-academy="true"
+              data-id="30006"
+            >
+              30006
+            </div>
+            <div
+              class="academies-list__academy "
+              data-academy="true"
+              data-id="30015"
+            >
+              30015
+            </div>
+            <div
+              class="academies-list__academy academies-list__academy_selected"
+              data-academy="true"
+              data-id="30013"
+            >
+              30013
+            </div>
+            <div
+              class="academies-list__academy "
+              data-academy="true"
+              data-id="30019"
+            >
+              30019
+            </div>
+            <div
+              class="academies-list__academy "
+              data-academy="true"
+              data-id="30021"
+            >
+              30021
+            </div>
+            <div
+              class="academies-list__academy "
+              data-academy="true"
+              data-id="30007"
+            >
+              30007
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="layout__extra"
+      >
+        <div
+          class="academies-info"
+        >
+          <div
+            class="academy-info"
+          >
+            <div
+              class="academy-info__devices"
+            >
+              <span
+                class="academy-info__devices-serial"
+              >
+                Devices serial number (wear level)
+              </span>
+              <div
+                class="academy-info__devices-list"
+              >
+                <div
+                  class="academy-info_device"
+                >
+                  1805C67HD01952
+                  <span
+                    class="academy-info_device-level"
+                  >
+                    (
+                    1.08
+                    )
+                  </span>
+                </div>
+                <div
+                  class="academy-info_device"
+                >
+                  TT-C67ML-A-0001-01653
+                  <span
+                    class="academy-info_device-level"
+                  >
+                    (
+                    0.79
+                    )
+                  </span>
+                </div>
+                <div
+                  class="academy-info_device"
+                >
+                  NGTT-0842
+                  <span
+                    class="academy-info_device-level"
+                  >
+                    (
+                    0.74
+                    )
+                  </span>
+                </div>
+                <div
+                  class="academy-info_device"
+                >
+                  TT-C67ML-A-0001-01642
+                  <span
+                    class="academy-info_device-level"
+                  >
+                    (
+                    0.68
+                    )
+                  </span>
+                </div>
+                <div
+                  class="academy-info_device"
+                >
+                  TT-C67ML-A-0001-02546
+                  <span
+                    class="academy-info_device-level"
+                  >
+                    (
+                    0.56
+                    )
+                  </span>
+                </div>
+                <div
+                  class="academy-info_device"
+                >
+                  1805C67HD02035
+                  <span
+                    class="academy-info_device-level"
+                  >
+                    (
+                    0.48
+                    )
+                  </span>
+                </div>
+                <div
+                  class="academy-info_device"
+                >
+                  TT-C67ML-A-0001-01556
+                  <span
+                    class="academy-info_device-level"
+                  >
+                    (
+                    0.45
+                    )
+                  </span>
+                </div>
+                <div
+                  class="academy-info_device"
+                >
+                  1805C67HD01991
+                  <span
+                    class="academy-info_device-level"
+                  >
+                    (
+                    0.42
+                    )
+                  </span>
+                </div>
+                <div
+                  class="academy-info_device"
+                >
+                  TT-C67ML-A-0001-01335
+                  <span
+                    class="academy-info_device-level"
+                  >
+                    (
+                    0.40
+                    )
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
