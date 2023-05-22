@@ -15,6 +15,7 @@ interface Device {
     academyId: number;
     serialNumber: string; 
     measurements: Measurement[];
+    wearLevel: number;
 }
 
 interface Academy {

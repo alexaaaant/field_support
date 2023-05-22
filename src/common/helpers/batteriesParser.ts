@@ -11,6 +11,7 @@ export const batteriesParser = (data: BatteriesRaw) => {
           academyId: entry.academyId,
           serialNumber: entry.serialNumber,
           measurements: [],
+          wearLevel: 0,
         };
       }
       devices[entry.serialNumber].measurements.push({
@@ -35,8 +36,10 @@ export const batteriesParser = (data: BatteriesRaw) => {
           count++;
         }
       }
-  
-      if (count > 0 && totalBatteryUsage / count > 0.3) {
+      const wearLevel = totalBatteryUsage / count;
+      device.wearLevel = wearLevel;
+
+      if (count > 0 && wearLevel > 0.3) {
         if (!academies[device.academyId]) {
           academies[device.academyId] = { batteryIssues: 0, devices: [] };
           academiesPrioritized.push(device.academyId);
