@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch } from '../common/hooks/useDispatch';
 import { getBatteries } from '../services/api';
 import { academiesAdded } from '../slices/academiesSlice';
-import { AcademiesLayout } from './AcademiesLayout';
+import { Layout } from './Layout';
 
 export const App: React.FC = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -19,9 +19,10 @@ export const App: React.FC = () => {
     },        []);
        
     return (
-        <div>{isLoading ? 
-        <div>Loading</div> :
-        <AcademiesLayout />
-    }</div>
+        <div className="container">{
+            isLoading ? 
+                <div>Loading...</div> :
+                <Layout />
+        }</div>
     );
 };

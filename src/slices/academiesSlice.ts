@@ -6,11 +6,13 @@ import { batteriesParser } from '../common/helpers/batteriesParser';
 interface AcademiesState {
   academiesPrioritized: number[];
   academies: Academies;
+  selectedAcademy: number | null;
 }
 
 const initialState: AcademiesState = {
   academiesPrioritized: [],
   academies: {},
+  selectedAcademy: null,
 };
 
 const academiesSlice = createSlice({
@@ -22,8 +24,12 @@ const academiesSlice = createSlice({
       state.academies = academies;
       state.academiesPrioritized = academiesPrioritized;
     },
+
+    academySelected(state: AcademiesState, action: PayloadAction<number>) {
+      state.selectedAcademy = action.payload;
+    },
   },
 });
 
-export const { academiesAdded } = academiesSlice.actions;
+export const { academiesAdded, academySelected } = academiesSlice.actions;
 export default academiesSlice.reducer;

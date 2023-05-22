@@ -13,6 +13,7 @@ interface Measurement {
 
 interface Device {
     academyId: number;
+    serialNumber: string; 
     measurements: Measurement[];
 }
 

@@ -9,6 +9,7 @@ export const batteriesParser = (data: BatteriesRaw) => {
       if (!devices[entry.serialNumber]) {
         devices[entry.serialNumber] = {
           academyId: entry.academyId,
+          serialNumber: entry.serialNumber,
           measurements: [],
         };
       }
