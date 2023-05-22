@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`batteriesParser should return bad batteries 1`] = `
+Object {
+  "academies": Object {
+    "30007": Object {
+      "batteryIssues": 1,
+      "devices": Array [
+        Object {
+          "academyId": 30007,
+          "measurements": Array [
+            Object {
+              "batteryLevel": 0.98,
+              "timestamp": 1558075835158,
+            },
+            Object {
+              "batteryLevel": 0.6,
+              "timestamp": 1558076228290,
+            },
+          ],
+          "serialNumber": "1805C67HD02009",
+          "wearLevel": 83.51393425109123,
+        },
+      ],
+    },
+    "30008": Object {
+      "batteryIssues": 1,
+      "devices": Array [
+        Object {
+          "academyId": 30008,
+          "measurements": Array [
+            Object {
+              "batteryLevel": 0.98,
+              "timestamp": 1558075835158,
+            },
+            Object {
+              "batteryLevel": 0.7,
+              "timestamp": 1558076228290,
+            },
+          ],
+          "serialNumber": "1805C67HD02019",
+          "wearLevel": 61.53658313238302,
+        },
+      ],
+    },
+  },
+  "academiesPrioritized": Array [
+    30007,
+    30008,
+  ],
+}
+`;
+
+exports[`batteriesParser should return bad batteries, if some batteries are bad 1`] = `
+Object {
+  "academies": Object {
+    "30007": Object {
+      "batteryIssues": 1,
+      "devices": Array [
+        Object {
+          "academyId": 30007,
+          "measurements": Array [
+            Object {
+              "batteryLevel": 0.98,
+              "timestamp": 1558075835158,
+            },
+            Object {
+              "batteryLevel": 0.6,
+              "timestamp": 1558076228290,
+            },
+          ],
+          "serialNumber": "1805C67HD02009",
+          "wearLevel": 83.51393425109123,
+        },
+      ],
+    },
+    "30008": Object {
+      "batteryIssues": 1,
+      "devices": Array [
+        Object {
+          "academyId": 30008,
+          "measurements": Array [
+            Object {
+              "batteryLevel": 0.98,
+              "timestamp": 1558075835158,
+            },
+            Object {
+              "batteryLevel": 0.7,
+              "timestamp": 1558076228290,
+            },
+          ],
+          "serialNumber": "1805C67HD02019",
+          "wearLevel": 61.53658313238302,
+        },
+      ],
+    },
+  },
+  "academiesPrioritized": Array [
+    30007,
+    30008,
+  ],
+}
+`;
